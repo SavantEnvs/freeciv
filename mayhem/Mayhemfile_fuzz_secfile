@@ -1,0 +1,8 @@
+project: savantenvs/freeciv
+target: fuzz_secfile
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_secfile/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_secfile
+    libfuzzer: true
